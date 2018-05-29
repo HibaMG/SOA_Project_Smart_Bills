@@ -1,0 +1,116 @@
+{smartBillingSystem}BillDetails_Process[1.0].0.9:1:billId,1165536
+{smartBillingSystem}BillDetails_Process[1.0].0.9:1:userId,444
+{smartBillingSystem}BillDetails_Process[1.0].0.9:2:AllBillsDetails,{"User Id": { "userId":"1165536", "address": "ramallah_al nahda St ","Total": "206.36", "billDetails": "This is Electricity and water bill....","Electric Bill": "100.76","Water Bill": "105.6", "electricPublishDate":2018-05-15,"electricPayBeforDate":2018-06-20,"waterPublishDate":1915-12-09,"waterPayBeforDate":1916-01-08}}
+{smartBillingSystem}BillDetails_Process[1.0].0.9:2:ElectricBillDetails,{"Electric Bill": { "id":"1165536", "address": "ramallah_al nahda St ","Total": "100.76", "billDetails": "billDetails.....", "publishDate":2018-05-15,"payBeforDate":2018-06-20}}
+{smartBillingSystem}BillDetails_Process[1.0].0.9:2:WaterBillDetails,{"Water Bill": { "id":"1165536", "address": "ramallah_al nahda St ","Total": "100.76", "billDetails": "billDetails.....", "publishDate":2018-05-15,"payBeforDate":2018-06-20}}
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:CALLER,null
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:delete_on_finish,null
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:ENDDT,2018-05-28 22:06:24.410
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:Finalized,Yes
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:READYDT,2018-05-28 22:06:24.339
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:START,1
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:STARTDT,2018-05-28 22:06:24.339
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:STATE,4
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:SuspendAfterCreation,null
+{smartBillingSystem}BillDetails_Process[1.0].0.9:0:WALL,0.071
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:1:billId,1165536
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:1:userId,444
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:2:AllBillsDetails,null
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:ENDDT,2018-05-28 22:06:24.409
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:HOST,192.168.56.1
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:NAME,GetAllBillsDetails1
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:PROGNAME,{smartBillingSystem}GetAllBillsDetails[1.0]
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:READYDT,2018-05-28 22:06:24.357
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:RESTART,null
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:START,1
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:STARTDT,2018-05-28 22:06:24.364
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:STATE,4
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:TYPE,ACTY
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:0:WALL,0.052
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:4:AM,HTTPAdapter
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:4:method,GET
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:4:urlstring,http://localhost:8898/api/javainuse
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:5:errormsg,null
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:5:headout,null:[HTTP/1.1 200]
+Content-Length:[322]
+Date:[Mon, 28 May 2018 19:06:24 GMT]
+Content-Type:[text/html;charset=UTF-8]
+
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:5:page,{"User Id": { "userId":"1165536", "address": "ramallah_al nahda St ","Total": "206.36", "billDetails": "This is Electricity and water bill....","Electric Bill": "100.76","Water Bill": "105.6", "electricPublishDate":2018-05-15,"electricPayBeforDate":2018-06-20,"waterPublishDate":1915-12-09,"waterPayBeforDate":1916-01-08}}
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:5:responseheaders,{null=[HTTP/1.1 200], Content-Length=[322], Date=[Mon, 28 May 2018 19:06:24 GMT], Content-Type=[text/html;charset=UTF-8]}
+{smartBillingSystem}BillDetails_Process[1.0].GetAllBillsDetails1.9:5:status,200
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:1:userId,444
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:2:ElectricBillDetails,null
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:ENDDT,2018-05-28 22:06:24.401
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:HOST,192.168.56.1
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:NAME,GetElectricBillDetails2
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:PROGNAME,{smartBillingSystem}GetElectricBillDetails[1.0]
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:READYDT,2018-05-28 22:06:24.357
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:RESTART,null
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:START,1
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:STARTDT,2018-05-28 22:06:24.364
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:STATE,4
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:TYPE,ACTY
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:0:WALL,0.044
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:4:AM,HTTPAdapter
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:4:method,GET
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:4:urlstring,http://localhost:9099/api/javainuse
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:5:errormsg,null
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:5:headout,null:[HTTP/1.1 200]
+Content-Length:[177]
+Date:[Mon, 28 May 2018 19:06:24 GMT]
+Content-Type:[text/html;charset=UTF-8]
+
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:5:page,{"Electric Bill": { "id":"1165536", "address": "ramallah_al nahda St ","Total": "100.76", "billDetails": "billDetails.....", "publishDate":2018-05-15,"payBeforDate":2018-06-20}}
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:5:responseheaders,{null=[HTTP/1.1 200], Content-Length=[177], Date=[Mon, 28 May 2018 19:06:24 GMT], Content-Type=[text/html;charset=UTF-8]}
+{smartBillingSystem}BillDetails_Process[1.0].GetElectricBillDetails2.9:5:status,200
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:1:userId,null
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:2:WaterBillDetails,null
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:ENDDT,2018-05-28 22:06:24.357
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:HOST,192.168.56.1
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:NAME,GetWaterBillDetails
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:PROGNAME,{smartBillingSystem}GetWaterBillDetails[1.0]
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:READYDT,2018-05-28 22:06:24.339
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:RESTART,null
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:START,1
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:STARTDT,2018-05-28 22:06:24.340
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:STATE,4
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:TYPE,ACTY
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:0:WALL,0.018
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:4:AM,HTTPAdapter
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:4:method,GET
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:4:urlstring,http://localhost:9092/api/javainuse
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:5:errormsg,null
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:5:headout,null:[HTTP/1.1 200]
+Content-Length:[174]
+Date:[Mon, 28 May 2018 19:06:24 GMT]
+Content-Type:[text/html;charset=UTF-8]
+
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:5:page,{"Water Bill": { "id":"1165536", "address": "ramallah_al nahda St ","Total": "100.76", "billDetails": "billDetails.....", "publishDate":2018-05-15,"payBeforDate":2018-06-20}}
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:5:responseheaders,{null=[HTTP/1.1 200], Content-Length=[174], Date=[Mon, 28 May 2018 19:06:24 GMT], Content-Type=[text/html;charset=UTF-8]}
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails.9:5:status,200
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:1:userId,444
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:2:WaterBillDetails,null
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:ENDDT,2018-05-28 22:06:24.377
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:HOST,192.168.56.1
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:NAME,GetWaterBillDetails1
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:PROGNAME,{smartBillingSystem}GetWaterBillDetails[1.0]
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:READYDT,2018-05-28 22:06:24.358
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:RESTART,null
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:START,1
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:STARTDT,2018-05-28 22:06:24.363
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:STATE,4
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:TYPE,ACTY
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:0:WALL,0.019
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:4:AM,HTTPAdapter
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:4:method,GET
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:4:urlstring,http://localhost:9092/api/javainuse
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:5:errormsg,null
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:5:headout,null:[HTTP/1.1 200]
+Content-Length:[174]
+Date:[Mon, 28 May 2018 19:06:24 GMT]
+Content-Type:[text/html;charset=UTF-8]
+
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:5:page,{"Water Bill": { "id":"1165536", "address": "ramallah_al nahda St ","Total": "100.76", "billDetails": "billDetails.....", "publishDate":2018-05-15,"payBeforDate":2018-06-20}}
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:5:responseheaders,{null=[HTTP/1.1 200], Content-Length=[174], Date=[Mon, 28 May 2018 19:06:24 GMT], Content-Type=[text/html;charset=UTF-8]}
+{smartBillingSystem}BillDetails_Process[1.0].GetWaterBillDetails1.9:5:status,200

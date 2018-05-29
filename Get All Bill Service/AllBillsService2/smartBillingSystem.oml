@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OCR VER="2.0" MAXID="2118">
+  <PROCS>
+    <PROC OID="Process1889" NAME="BillDetails_Process" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" PUBLISHED="true" SUBPROC="false" FLOWCONTROL="false">
+      <INBOX>
+        <PARAM OID="InboxParameter1930" NAME="userId" DESC="" TYPE="String" />
+        <PARAM OID="InboxParameter2002" NAME="billId" DESC="" TYPE="String" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter1942" NAME="AllBillsDetails" DESC="" TYPE="JSON" />
+        <PARAM OID="OutboxParameter1946" NAME="WaterBillDetails" DESC="" TYPE="JSON" />
+        <PARAM OID="OutboxParameter2082" NAME="ElectricBillDetails" DESC="" TYPE="JSON" />
+      </OUTBOX>
+      <TASKS>
+        <ACTIVITY OID="Activity1896" NAME="GetWaterBillDetails" DESC="" ACT="" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program1863" />
+        <ACTIVITY OID="Activity1996" NAME="GetAllBillsDetails1" DESC="" ACT="Finished(GetWaterBillDetails)" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program1957" />
+        <ACTIVITY OID="Activity2065" NAME="GetElectricBillDetails2" DESC="" ACT="Finished(GetWaterBillDetails)" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program1838" />
+        <ACTIVITY OID="Activity2089" NAME="GetWaterBillDetails1" DESC="" ACT="Finished(GetWaterBillDetails)" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program1863" />
+      </TASKS>
+      <DATAFLOW>
+        <BIND OID="Binding2004" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter2002" DESTPID="InboxParameter1995" DESTTID="Activity1996" ACTION="0" />
+        <BIND OID="Binding2006" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1930" DESTPID="InboxParameter1959" DESTTID="Activity1996" ACTION="0" />
+        <BIND OID="Binding2034" SRCTYP="1" DESTTYP="3" SRCPID="OutboxParameter1978" DESTPID="OutboxParameter1942" SRCTID="Activity1996" ACTION="0" />
+        <BIND OID="Binding2070" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1930" DESTPID="InboxParameter1839" DESTTID="Activity2065" ACTION="0" />
+        <BIND OID="Binding2084" SRCTYP="1" DESTTYP="3" SRCPID="OutboxParameter1858" DESTPID="OutboxParameter2082" SRCTID="Activity2065" ACTION="0" />
+        <BIND OID="Binding2094" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1930" DESTPID="InboxParameter1864" DESTTID="Activity2089" ACTION="0" />
+        <BIND OID="Binding2117" SRCTYP="1" DESTTYP="3" SRCPID="OutboxParameter1883" DESTPID="OutboxParameter1946" SRCTID="Activity2089" ACTION="0" />
+      </DATAFLOW>
+      <VIEWS>
+        <VIEW OID="View1890" NAME="ControlFlow" DESC="" VTYPE="0">
+          <ARROWS>
+            <ARROW OID="Arrow2086" SOURCE="RefBox1898" DESTINATION="RefBox1998" REFTYPE="4" ROUTE="2" />
+            <ARROW OID="Arrow2088" SOURCE="RefBox1898" DESTINATION="RefBox2067" REFTYPE="4" ROUTE="2" />
+            <ARROW OID="Arrow2096" SOURCE="RefBox1898" DESTINATION="RefBox2091" REFTYPE="4" ROUTE="2" />
+          </ARROWS>
+          <BOXES>
+            <RBOX OID="RefBox1898" X="360.0" Y="167.0" DX="0.0" DY="0.0" REF="Activity1896" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+            <RBOX OID="RefBox1998" X="470.0" Y="305.0" DX="0.0" DY="0.0" REF="Activity1996" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+            <RBOX OID="RefBox2067" X="699.0" Y="314.0" DX="0.0" DY="0.0" REF="Activity2065" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+            <RBOX OID="RefBox2091" X="164.0" Y="345.0" DX="0.0" DY="0.0" REF="Activity2089" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+        <VIEW OID="View1891" NAME="DataFlow" DESC="" VTYPE="1">
+          <ARROWS>
+            <ARROW OID="Arrow2005" SOURCE="RefBox2003" DESTINATION="RefBox2000" REF="Binding2004" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow2007" SOURCE="RefBox1931" DESTINATION="RefBox1999" REF="Binding2006" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow2035" SOURCE="RefBox2027" DESTINATION="RefBox1943" REF="Binding2034" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow2071" SOURCE="RefBox1931" DESTINATION="RefBox2068" REF="Binding2070" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow2085" SOURCE="RefBox2081" DESTINATION="RefBox2083" REF="Binding2084" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow2095" SOURCE="RefBox1931" DESTINATION="RefBox2092" REF="Binding2094" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow2118" SOURCE="RefBox2109" DESTINATION="RefBox1947" REF="Binding2117" REFTYPE="1" ROUTE="2" />
+          </ARROWS>
+          <BOXES>
+            <RBOX OID="RefBox1892" X="429.0" Y="8.0" DX="0.0" DY="0.0" REF="Process1889" REFTYPE="5">
+              <BOXES>
+                <RBOX OID="RefBox1931" X="407.0" Y="55.0" DX="0.0" DY="0.0" REF="InboxParameter1930" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox2003" X="573.0" Y="54.0" DX="0.0" DY="0.0" REF="InboxParameter2002" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox1893" X="449.0" Y="561.0" DX="0.0" DY="0.0" REF="Process1889" REFTYPE="6">
+              <BOXES>
+                <RBOX OID="RefBox1943" X="199.0" Y="453.0" DX="0.0" DY="0.0" REF="OutboxParameter1942" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1947" X="475.0" Y="446.0" DX="0.0" DY="0.0" REF="OutboxParameter1946" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox2083" X="778.0" Y="440.0" DX="0.0" DY="0.0" REF="OutboxParameter2082" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox1997" X="181.0" Y="285.0" DX="0.0" DY="0.0" REF="Activity1996" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox1999" X="147.0" Y="177.0" DX="0.0" DY="0.0" REF="InboxParameter1959" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox2000" X="293.0" Y="180.0" DX="0.0" DY="0.0" REF="InboxParameter1995" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox2027" X="199.0" Y="356.0" DX="0.0" DY="0.0" REF="OutboxParameter1978" REFTYPE="9">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox2066" X="741.0" Y="275.0" DX="0.0" DY="0.0" REF="Activity2065" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox2068" X="799.0" Y="165.0" DX="0.0" DY="0.0" REF="InboxParameter1839" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox2081" X="802.0" Y="340.0" DX="0.0" DY="0.0" REF="OutboxParameter1858" REFTYPE="9">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox2090" X="445.0" Y="275.0" DX="0.0" DY="0.0" REF="Activity2089" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox2092" X="499.0" Y="159.0" DX="0.0" DY="0.0" REF="InboxParameter1864" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox2109" X="488.0" Y="348.0" DX="0.0" DY="0.0" REF="OutboxParameter1883" REFTYPE="9">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+      </VIEWS>
+    </PROC>
+  </PROCS>
+  <PROGRAMS>
+    <PROGRAM OID="Program1838" NAME="GetElectricBillDetails" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
+      <INBOX>
+        <PARAM OID="InboxParameter1839" NAME="userId" DESC="" TYPE="String" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter1906" NAME="ElectricBillDetails" DESC="" TYPE="JSON" />
+      </OUTBOX>
+      <ACCESS>
+        <METHOD OID="AccessMethod1840" NAME="HTTPAdapter" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" COMP="system.CT_HTTP">
+          <INBOX>
+            <PARAM OID="InboxParameter1842" NAME="method" TYPE="Enum:GET,POST,PUT,DELETE,OPTIONS,HEAD">GET</PARAM>
+            <PARAM OID="InboxParameter1844" NAME="urlstring" TYPE="URI">http://localhost:9099/api/javainuse</PARAM>
+            <PARAM OID="InboxParameter1846" NAME="headin" TYPE="Text Advanced" />
+            <PARAM OID="InboxParameter1848" NAME="body" TYPE="Text" />
+            <PARAM OID="InboxParameter1850" NAME="user" TYPE="String Advanced" />
+            <PARAM OID="InboxParameter1852" NAME="pass" TYPE="Password Advanced" />
+          </INBOX>
+          <OUTBOX>
+            <PARAM OID="OutboxParameter1854" NAME="headout" TYPE="String" />
+            <PARAM OID="OutboxParameter1856" NAME="responseheaders" TYPE="Map" />
+            <PARAM OID="OutboxParameter1858" NAME="page" TYPE="String" />
+            <PARAM OID="OutboxParameter1860" NAME="status" TYPE="String" />
+            <PARAM OID="OutboxParameter1862" NAME="errormsg" TYPE="String" />
+          </OUTBOX>
+        </METHOD>
+      </ACCESS>
+    </PROGRAM>
+    <PROGRAM OID="Program1863" NAME="GetWaterBillDetails" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
+      <INBOX>
+        <PARAM OID="InboxParameter1864" NAME="userId" DESC="" TYPE="String" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter1907" NAME="WaterBillDetails" DESC="" TYPE="JSON" />
+      </OUTBOX>
+      <ACCESS>
+        <METHOD OID="AccessMethod1865" NAME="HTTPAdapter" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" COMP="system.CT_HTTP">
+          <INBOX>
+            <PARAM OID="InboxParameter1867" NAME="method" TYPE="Enum:GET,POST,PUT,DELETE,OPTIONS,HEAD">GET</PARAM>
+            <PARAM OID="InboxParameter1869" NAME="urlstring" TYPE="URI">http://localhost:9092/api/javainuse</PARAM>
+            <PARAM OID="InboxParameter1871" NAME="headin" TYPE="Text Advanced" />
+            <PARAM OID="InboxParameter1873" NAME="body" TYPE="Text" />
+            <PARAM OID="InboxParameter1875" NAME="user" TYPE="String Advanced" />
+            <PARAM OID="InboxParameter1877" NAME="pass" TYPE="Password Advanced" />
+          </INBOX>
+          <OUTBOX>
+            <PARAM OID="OutboxParameter1879" NAME="headout" TYPE="String" />
+            <PARAM OID="OutboxParameter1881" NAME="responseheaders" TYPE="Map" />
+            <PARAM OID="OutboxParameter1883" NAME="page" TYPE="String" />
+            <PARAM OID="OutboxParameter1885" NAME="status" TYPE="String" />
+            <PARAM OID="OutboxParameter1887" NAME="errormsg" TYPE="String" />
+          </OUTBOX>
+        </METHOD>
+      </ACCESS>
+    </PROGRAM>
+    <PROGRAM OID="Program1957" NAME="GetAllBillsDetails" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
+      <INBOX>
+        <PARAM OID="InboxParameter1959" NAME="userId" DESC="" TYPE="String" />
+        <PARAM OID="InboxParameter1995" NAME="billId" DESC="" TYPE="String" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter1958" NAME="AllBillsDetails" DESC="" TYPE="JSON" />
+      </OUTBOX>
+      <ACCESS>
+        <METHOD OID="AccessMethod1960" NAME="HTTPAdapter" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" COMP="system.CT_HTTP">
+          <INBOX>
+            <PARAM OID="InboxParameter1962" NAME="method" TYPE="Enum:GET,POST,PUT,DELETE,OPTIONS,HEAD">GET</PARAM>
+            <PARAM OID="InboxParameter1964" NAME="urlstring" TYPE="URI">http://localhost:8898/api/javainuse</PARAM>
+            <PARAM OID="InboxParameter1966" NAME="headin" TYPE="Text Advanced" />
+            <PARAM OID="InboxParameter1968" NAME="body" TYPE="Text" />
+            <PARAM OID="InboxParameter1970" NAME="user" TYPE="String Advanced" />
+            <PARAM OID="InboxParameter1972" NAME="pass" TYPE="Password Advanced" />
+          </INBOX>
+          <OUTBOX>
+            <PARAM OID="OutboxParameter1974" NAME="headout" TYPE="String" />
+            <PARAM OID="OutboxParameter1976" NAME="responseheaders" TYPE="Map" />
+            <PARAM OID="OutboxParameter1978" NAME="page" TYPE="String" />
+            <PARAM OID="OutboxParameter1980" NAME="status" TYPE="String" />
+            <PARAM OID="OutboxParameter1982" NAME="errormsg" TYPE="String" />
+          </OUTBOX>
+        </METHOD>
+      </ACCESS>
+    </PROGRAM>
+  </PROGRAMS>
+</OCR>
+
